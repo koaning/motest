@@ -15,7 +15,6 @@ Suppose that you have a notebook `some_notebook.py` that you want to test. Maybe
 ```python
 import marimo as mo
 import pytest
-return (mo,)
 
 def add(a, b):
     return a + b
@@ -48,4 +47,14 @@ test_some_notebook.py ..                                                   [100%
 
 ### How it works 
 
-The setup is really minimal. We call the `marimo export script` command and write the Python code to a temporary file. We then point `pytest` to this file and do a cleanup after the tests are done. The status code is returned to the caller and you are also able to pass any `pytest` arguments to the command.
+The setup is really minimal. We call the `marimo export script` command and write the Python code to a temporary file. We then point `pytest` to this file and do a cleanup after the tests are done. The status code is returned to the caller and you are also able to pass any `pytest` arguments to the command as well.
+
+You could accomplish the same thing by adding this to a `Makefile`:
+
+```Makefile
+test:
+    marimo export script -o test_some_notebook.py some_notebook.py
+    python -m pytest test_some_notebook.py
+```
+
+But it kind of felt nicer to have a dedicated command for this.
