@@ -1,6 +1,6 @@
-<img src="https://github.com/koaning/motest/blob/main/testimg.png?raw=true" alt="logo for motest" width="200" align="right">
-
 ### motest
+
+<img src="https://github.com/koaning/motest/blob/main/testimg.png?raw=true" alt="logo for motest" width="200" align="right">
 
 Small cli that allows for more elaborate testing inside Marimo
 
