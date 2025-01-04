@@ -1,4 +1,4 @@
-<img src="https://github.com/koaning/motest/raw/main/images/motest.png" alt="motest" width="200">
+<img src="https://github.com/koaning/motest/blob/main/testimg.png?raw=true" alt="logo for motest" width="200" style="float: right;">
 
 ## motest
 
