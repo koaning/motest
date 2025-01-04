@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from motest import motest
+from motest.__main__ import motest
 
 def test_good_notebook():
     assert motest(Path("tests/nbs/good.py")) == 0
