@@ -19,6 +19,9 @@ def motest(mofile: Path, *args):
     return retcode
 
 if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: motest <notebook.py> [pytest args]")
+        exit(1)
     mofile = Path(sys.argv[1])
     retcode = motest(mofile, *sys.argv[2:])
     # Exit with pytest exit code

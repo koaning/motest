@@ -1,12 +1,7 @@
-[build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
-
 [project]
 name = "motest"
 version = "0.1.0"
 description="Small cli that allows for more elborate testing inside Marimo"
-
 license = {file = "LICENSE"}
 readme = "README.md"
 authors = [
@@ -20,7 +15,6 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "License :: OSI Approved :: MIT License",
     "Topic :: Scientific/Engineering",
-    "Topic :: Scientific/Engineering :: Artificial Intelligence",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
@@ -41,3 +35,11 @@ exclude = [
     "notebooks",
     "tests",
 ]
+
+[project.scripts]
+motest = "motest:__main__"
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
