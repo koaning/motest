@@ -1,8 +1,10 @@
-<img src="https://github.com/koaning/motest/blob/main/testimg.png?raw=true" alt="logo for motest" width="200" style="float: right;">
+<img src="https://github.com/koaning/motest/blob/main/testimg.png?raw=true" alt="logo for motest" width="200" align="right">
 
 ### motest
 
 Small cli that allows for more elaborate testing inside Marimo
+
+> This project was made so I might more easily write elaborate tests in side of Marimo notebooks. It is barely worth the effort because you can also just add the commands together in a Makefile, but it was a fun exercise that led me to learn how pytest can be called directly from Python.
 
 ## Installation
 
@@ -47,7 +49,7 @@ test_some_notebook.py ..                                                   [100%
 ============================== 2 passed in 0.11s ===============================
 ```
 
-### How it works 
+## How it works 
 
 The setup is really minimal. We call the `marimo export script` command and write the Python code to a temporary file. We then point `pytest` to this file and do a cleanup after the tests are done. The status code is returned to the caller and you are also able to pass any `pytest` arguments to the command as well.
 
