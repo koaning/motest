@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "motest"
+version = "0.1.0"
+description="Small cli that allows for more elborate testing inside Marimo"
+
+license = {file = "LICENSE"}
+readme = "README.md"
+authors = [
+    {name = "Vincent D. Warmerdam"},
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "marimo", "pytest"
+]
+
+[project.urls]
+repository = "https://github.com/koaning/motest"
+issue-tracker = "https://github.com/koaning/motest/issues"
+documentation = "https://koaning.github.io/motest/"
+
+[tool.setuptools.packages.find]
+include = ["motest*"]
+exclude = [
+    "docs",
+    "images",
+    "notebooks",
+    "tests",
+]
