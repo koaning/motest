@@ -1,16 +1,16 @@
 <img src="https://github.com/koaning/motest/blob/main/testimg.png?raw=true" alt="logo for motest" width="200" style="float: right;">
 
-## motest
+### motest
 
 Small cli that allows for more elaborate testing inside Marimo
 
-### Installation
+## Installation
 
 ```bash
 uv pip install motest
 ```
 
-### Usage
+## Usage
 
 Suppose that you have a notebook `some_notebook.py` that you want to test. Maybe with the following content:
 
@@ -47,7 +47,7 @@ test_some_notebook.py ..                                                   [100%
 ============================== 2 passed in 0.11s ===============================
 ```
 
-#### How it works 
+### How it works 
 
 The setup is really minimal. We call the `marimo export script` command and write the Python code to a temporary file. We then point `pytest` to this file and do a cleanup after the tests are done. The status code is returned to the caller and you are also able to pass any `pytest` arguments to the command as well.
 
